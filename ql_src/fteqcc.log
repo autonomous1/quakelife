@@ -1,0 +1,47 @@
+Source file: progs.src
+Outputfile: ../qwprogs.dat
+Outputfile: ../progs.dat
+in function door_hit_bottom (line 114),
+doors.qc:139: warning: You may wish to add brackets after that ! operator
+in function door_touch (line 122),
+doors.qc:388: warning: You may wish to add brackets after that ! operator
+doors.qc:428: warning: You may wish to add brackets after that ! operator
+in function LinkDoors (line 489),
+doors.qc:544: warning: You may wish to add brackets after that ! operator
+in function multi_touch (line 81),
+triggers.qc:85: warning: You may wish to add brackets after that ! operator
+in function teleport_touch (line 436),
+triggers.qc:441: warning: You may wish to add brackets after that ! operator
+in function Explode (line 141),
+halflife.qc:151: warning: You may wish to add brackets after that ! operator
+in function lbeam_think (line 107),
+halflife.qc:241: warning: You may wish to add brackets after that ! operator
+in function func_door_rotating (line 7),
+hl_doors.qc:180: warning: You may wish to add brackets after that ! operator
+in function momentary_door (line 196),
+hl_doors.qc:198: warning: You may wish to add brackets after that ! operator
+in function fx_spark (line 191),
+hl_extras_fx.qc:205: warning: You may wish to add brackets after that ! operator
+in function fx_drip (line 368),
+hl_extras_fx.qc:393: warning: You may wish to add brackets after that ! operator
+in function fx_sound (line 473),
+hl_extras_fx.qc:503: warning: You may wish to add brackets after that ! operator
+in function ladder_touch (line 125),
+hl_ladder.qc:51: warning: You may wish to add brackets after that ! operator
+in function shake_think (line 271),
+hl_misc.qc:305: warning: You may wish to add brackets after that ! operator
+in function mortar_face (line 117),
+hl_tankmortar.qc:166: warning: You may wish to add brackets after that ! operator
+in function tc_rotating (line 384),
+hl_train.qc:392: warning: You may wish to add brackets after that ! operator
+in function func_trackchange (line 771),
+hl_train.qc:787: warning: You may wish to add brackets after that ! operator
+Progs should run on any Quake executor
+at global scope,
+note: You can use the noref prefix or pragma to silence this message.
+misc.qc:474: warning: viewthing  no references
+hl_misc.qc:446: warning: notfilestart  no references
+hl_misc.qc:767: warning: i3  no references
+hl_misc.qc:769: warning: ff4  no references
+hl_train.qc:142: warning: orgsv  no references
+23 warnings

@@ -1,0 +1,114 @@
+// First non-comment character must be # to use
+// "new style" progs.src
+#pragma PROGS_DAT ../qwprogs.dat
+
+// uncomment based on desired compile
+#define NETQUAKE
+//#define FTE
+#define MONSTERS
+#define REPLACEMENTS
+#define HALFLIFE
+#define DARKPLACES				// use darkplaces' string conversion
+//#define PHYSICS
+
+// compile options
+#ifdef NETQUAKE
+// if netquake, use progs.dat file name
+#pragma PROGS_DAT ../progs.dat
+#endif
+
+#ifdef FTE
+// if FTE, use FTE style progs and use fteprogs.dat file name
+#pragma target fte
+#pragma PROGS_DAT ../fteprogs.dat
+#endif
+
+// includes
+#include "defs.qc"
+#ifdef HALFLIFE
+#include "hl_defs.qc"		// Half-Life entity properties (see below)
+#endif
+#ifdef PHYSICS
+#include "physics/phys_defs.qc"
+#endif
+#include "subs.qc"
+#include "engine.qc"
+#include "effects.qc"
+#include "obituary.qc"
+#include "combat.qc"
+#include "items.qc"
+#include "proj.qc"
+#include "weapons.qc"
+#include "world.qc"
+#include "client.qc"
+#include "spectate.qc"
+#include "player.qc"
+#include "doors.qc"
+#include "buttons.qc"
+#include "triggers.qc"
+#include "plats.qc"
+#include "misc.qc"
+
+#ifdef MONSTERS
+#include "fight.qc"
+#include "ai.qc"
+#include "monsters.qc"
+#include "dog.qc"
+#include "soldier.qc"
+#include "enforcer.qc"
+#include "ogre.qc"
+#include "wizard.qc"
+#include "demon.qc"
+#include "knight.qc"
+#include "hknight.qc"
+#include "shalrath.qc"
+#include "shambler.qc"
+#include "fish.qc"
+#include "tarbaby.qc"
+#include "zombie.qc"
+#include "boss.qc"
+#include "oldone.qc"
+#else
+#include "nomonst.qc"
+#endif
+
+#ifdef REPLACEMENTS
+#include "replace.qc"
+#endif
+
+#ifdef PHYSICS
+#include "physics/dpextensions.qc"
+#include "physics/phys_matrix.qc"
+#include "physics/phys_exec.qc"
+#include "physics/phys_loadsave.qc"
+#endif
+
+#ifdef HALFLIFE
+#include "halflife.qc"		// oztf half-life support: multi_manager, beams, breakables, etc.
+#include "hl_breakable.qc"
+#include "hl_conveyor.qc"
+#include "hl_doors.qc"		// rotating doors (though mostly handled in doors.qc)
+#include "hl_extras_fx.qc"	// sparks and other effects (from extras r4)
+#include "hl_ladder.qc"		// ladder from extras r4 mod
+#include "hl_levels.qc"		// landmark/level transition handler (see client.qc too)
+#include "sentry.qc"
+#include "missiles.qc"
+#include "hl_megaturret.qc"	// megatf turret (replaces hl ceiling turret)
+#include "spider.qc"		// travail/marcher spider
+#include "hl_monsters.qc"	// monster replacements
+#include "hl_misc.qc"
+#include "hl_multis.qc"		// multisource and related entities
+#include "hl_nihilanth.qc"	// replacement for the nihilinth end boss
+#include "hl_rot_button.qc"	// rotating entities and buttons
+#include "hl_scripts.qc"	// *incomplete* script support
+#include "hl_sound.qc"		// sound and scripted sentence parser
+#include "hl_tankmortar.qc"	// tanks and cotnrollable guns
+#include "hl_train.qc"		// func_tracktrain and related entities
+#include "hl_trig_glob.qc"	// handles global variables
+#include "hl_water.qc"
+#include "hl_weapons.qc"	// Half-Life weapons/items (also look at replace.qc)
+#include "hl_pushable.qc"	// pushable brush models from nehahra
+#include "boss_killable.qc"	// killable chthon from beyond belief
+#endif
+
+
